@@ -114,7 +114,7 @@ if(!empty($homescreen)){
 					<div class="section-content">
 						<ul class="row clearfix">
 							<?php
-							json_decode($index);
+							
 							foreach ($event_category as $category) {
 							?>
 							<li class="category-1 col-sm-2">

@@ -6,23 +6,19 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		//load model
-		$index=array();
-		$index['homeScreen'] = array(
+		$homeScreen = array(
 			'homescreen' => $this->Asset_model->get_home(),
           	'thumbs' => $this->Asset_model->get_thumbs(),
 			'event_category' => $this->Front_page_model->event_category(),
 			'event_date' => $this->Front_page_model->event_date(),
 		);
-		$index['event_image']=array('assets/images/running.png','assets/images/running.png','assets/images/running.png',
+		$event_image=array('assets/images/running.png','assets/images/running.png','assets/images/running.png',
 							'assets/images/running.png','assets/images/running.png','assets/images/running.png');
 
-		
-		json_encode($index);
-		
 		$data['title'] = "Tickets4U::Tickets4U";
 		$this->load->view('global/header',$data);
 		$this->load->view('global/menu');
-		$this->load->view('home/index',$index);
+		$this->load->view('home/index', $homeScreen, $event_image);
 		$this->load->view('global/footer');
 		
 	}
