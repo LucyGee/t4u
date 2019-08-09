@@ -5,6 +5,9 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
+		var_dump($_POST['event_image']);
+		$event_image=array('assets/images/running.png','assets/images/running.png','assets/images/running.png',
+							'assets/images/running.png','assets/images/running.png','assets/images/running.png');
 		//load model
 		$homeScreen = array(
 			'homescreen' => $this->Asset_model->get_home(),
@@ -12,13 +15,14 @@ class Welcome extends CI_Controller {
 			'event_category' => $this->Front_page_model->event_category(),
 			'event_date' => $this->Front_page_model->event_date(),
 		);
-		$event_image=array('assets/images/running.png','assets/images/running.png','assets/images/running.png',
-							'assets/images/running.png','assets/images/running.png','assets/images/running.png');
-
+		
+		
+		$index=array_merge($homeScreen,$event_image);
+		
 		$data['title'] = "Tickets4U::Tickets4U";
 		$this->load->view('global/header',$data);
 		$this->load->view('global/menu');
-		$this->load->view('home/index', $homeScreen, $event_image);
+		$this->load->view('home/index',$index);
 		$this->load->view('global/footer');
 		
 	}
