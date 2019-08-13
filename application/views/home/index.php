@@ -116,15 +116,26 @@ if(!empty($homescreen)){
 							<?php
 							
 							foreach ($event_category as $category) {
+								
+							
+							
+								if($category['id']=="sports"){
 							?>
-							<li class="category-1 col-sm-2">
+									
+								
+									<li class="category-1 col-sm-2">
 							   
 								 
-								<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
-								<?php echo '<img src="' . $event_image[$i] . '">';?>
-								<div><?php echo $category['category_name']; ?></div></a>
-							</li>
+									<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+								
+									<img src="assets/images/running.png">
+								 
+								
+									 
+									<div><?php echo $category['category_name']; ?></div></a>
+									</li>
 							<?php } ?>
+							<?php  }?>
 						</ul>
 					</div>
 				</div>
