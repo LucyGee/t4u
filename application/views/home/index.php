@@ -5,7 +5,7 @@ if(!empty($homescreen)){
 			<div id="deskstop-slider"><a href="<?php echo base_url(); ?>index.php/event?me=<?php echo $value['event_id']; ?>">
   			<img class="mySlides img-responsive" src="<?php echo $value['slider_image']; ?>"></a></div>
 			<a href="<?php echo base_url(); ?>index.php/event?me=<?php echo $value['event_id']; ?>"><button class="explore">
-  Purchase Ticket</button></a>
+  			Purchase Ticket</button></a>
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -105,42 +105,77 @@ if(!empty($homescreen)){
 		
 
 		<section class="section-event-category">
-			<div class="spacer-35"></div>
+			
 			<div class="container">
+			<div class="clearfix">	
 				<div class="row">
 					<div class="section-header">
 						<h2>Event by Categories</h2>
 					</div>
 					<div class="section-content">
-						<ul class="row clearfix">
+						<ul>
 							<?php
-							
 							foreach ($event_category as $category) {
-								
-							
-							
-								if($category['id']=="sports"){
+								if($category['id']=="1"){
 							?>
-									
+								<li class="category-1 col-sm-2">	
+							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									<img src="assets/images/running.png" style="width:100px; height:100px;">
+								 	<div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									<?php }
+									elseif($category['id']=="3"){
+									?>
+								<li class="category-1 col-sm-2">	
+							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									<img src="assets/images/singer.png" style="width:100px; height:100px;">
+								 	<div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									<?php }
+									elseif($category['id']=="4"){
+										?>
+								<li class="category-1 col-sm-2">	
+							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									<img src="assets/images/theatre-masks.png" style="width:100px; height:100px;">
+								 	<div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									<?php }
+									elseif($category['id']=="5"){
+										?>
+								<li class="category-1 col-sm-2">	
+										<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									 <img src="assets/images/parties.png" style="width:100px; height:100px;">
+									  <div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									 <?php }
+									 elseif($category['id']=="6"){
+										 ?>
+								<li class="category-1 col-sm-2">	
+										 <a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									  <img src="assets/images/communities.png" style="width:100px; height:100px;">
+									   <div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									  <?php }
+									  else{
+										  ?>
+								<li class="category-1 col-sm-2">	
+										  <a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
+									   <img src="assets/images/class.png" style="width:100px; height:100px;">
+										<div><?php echo $category['category_name']; ?></div></a>
+								</li>
+									   <?php }?>		
+						
 								
-									<li class="category-1 col-sm-2">
-							   
-								 
-									<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
-								
-									<img src="assets/images/running.png">
-								 
-								
-									 
-									<div><?php echo $category['category_name']; ?></div></a>
-									</li>
-							<?php } ?>
 							<?php  }?>
 						</ul>
 					</div>
 				</div>
+				</div>
 			</div>
-			</div>
+			
+		<div class="spacer-35"></div>
+		<div class="spacer-35"></div>
+		<div class="spacer-35"></div>	
         <div class="container-fluid" id="ipay_channels_icons">
 			<div style="width: 84%; margin: 0 auto; background-color: #eee;padding-top: 5px;padding-bottom: 5px;">
 			<div class="row align-items-start">

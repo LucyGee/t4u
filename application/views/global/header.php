@@ -46,7 +46,8 @@
 		.card {
 		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 		    transition: 0.3s;
-		    width: 95%;
+			width: 95%;
+			border: 3px solid #000000;
 		}
 
 		.card:hover {

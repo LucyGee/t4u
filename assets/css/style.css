@@ -916,7 +916,7 @@ body{
 
 .section-upcoming-events{
 	padding:5px 0 2px;
-	background:#fff
+	background:rgb(255, 255, 255)
 }
 
 .section-upcoming-events .section-header{
@@ -1268,12 +1268,12 @@ body{
 
 
 .section-event-category{
-	background:#eee;
+	background:rgb(163, 240, 223);
 	padding:35px 0 40px;
 }
 
 .section-event-category .section-header h2{
-	font-size:22px;
+	font-size:22px;section-header
 	line-height:22px;
 	color:#373737;
 	text-transform:uppercase;
@@ -5132,6 +5132,7 @@ body{
 	padding-left: 60px;
 	text-align: center;
 	text-transform: uppercase;
+	pointer-events: none;
 	transition: 0.5s;
 	background-size: 200% auto;
 	color: white;

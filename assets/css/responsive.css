@@ -856,7 +856,7 @@
 		display: none;
 	}
 	
-	.section-event-category .section-content ul li,
+	.section-event-category . ul li,
 	.section-recent-videos .section-content ul li	{
 		float: none;
 		width: 100%;
