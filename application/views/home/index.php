@@ -113,61 +113,61 @@ if(!empty($homescreen)){
 						<h2>Event by Categories</h2>
 					</div>
 					<div class="section-content">
-						<ul>
+						
 							<?php
 							foreach ($event_category as $category) {
 								if($category['id']=="1"){
 							?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									<img src="assets/images/running.png" style="width:100px; height:100px;">
 								 	<div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								</div>
 									<?php }
 									elseif($category['id']=="3"){
 									?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									<img src="assets/images/singer.png" style="width:100px; height:100px;">
 								 	<div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								</div>
 									<?php }
 									elseif($category['id']=="4"){
 										?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 							   		<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									<img src="assets/images/theatre-masks.png" style="width:100px; height:100px;">
 								 	<div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								</div>
 									<?php }
 									elseif($category['id']=="5"){
 										?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 										<a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									 <img src="assets/images/parties.png" style="width:100px; height:100px;">
 									  <div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								</div>
 									 <?php }
 									 elseif($category['id']=="6"){
 										 ?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 										 <a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									  <img src="assets/images/communities.png" style="width:100px; height:100px;">
 									   <div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								</div>
 									  <?php }
 									  else{
 										  ?>
-								<li class="category-1 col-sm-2">	
+								<div class="category-1 col-sm-2">	
 										  <a href="<?php echo base_url('index.php/Welcome/event_category/'.$category['id']); ?>">
 									   <img src="assets/images/class.png" style="width:100px; height:100px;">
 										<div><?php echo $category['category_name']; ?></div></a>
-								</li>
+								 </div>
 									   <?php }?>		
 						
 								
 							<?php  }?>
-						</ul>
+					
 					</div>
 				</div>
 				</div>
